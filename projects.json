@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Telco Customer Churn Analysis",
+    "visible": false,
+    "description": "A Power BI dashboard analyzing customer churn in a telecom company. It highlights churn rate, contract types, payment methods, and customer retention",
+    "image": "img/Telco.png",
+    "type": "powerbi",
+    "link": "https://app.powerbi.com/view?r=eyJrIjoiMDE1NGM0ZDAtM2Y0YS00NjFmLWI3YTAtZGMzNGQ3OGY1MDQ4IiwidCI6IjAwZTczYzA2LTQ2NmUtNDk1MS05YjJjLWIxMTI3N2RkNjIzMiIsImMiOjl9"
+  },
+  {
+    "title": "Car Sales and Service",
+    "visible": false,
+    "description": "This project analyzes car dealership sales, focusing on multiple critical areas such as profits, recalls, and customer sentiment using IBM Cognos Analytics.",
+    "image": "img/car.png",
+    "type": "youtube",
+    "link": "https://www.youtube.com/embed/Pkmi3zuSxTU"
+  },{
+  "title": "Sales Analytics Dashboard",
+  "visible": true,
+  "description": "Built an automated, end-to-end BI solution to track global sales and profitability. Engineered a robust star-schema model to resolve 50% of manual reporting bottlenecks and deliver actionable performance insights.",
+  "image": "img/Sales1.jpeg",
+  "type": "image",
+  "link": "" 
+},
+
+{
+  "title": "Saudi Birth Names Analysis",
+  "visible": true,
+  "description": "Analysis of 4,000+ birth records using advanced Power Query and DAX. Built a multi-table data model to visualize name frequencies and gender distributions, transforming raw Excel data into interactive demographic insights.",
+  "image": "img/Names.jpeg",
+  "type": "image",
+  "link": "" 
+},
+{
+  "title": "Power Bi Design",
+  "visible": false,
+  "description": "This project analyzes car dealership sales, focusing on multiple critical areas such as profits, recalls, and customer sentiment using IBM Cognos Analytics.",
+  "image": "img/Telco.png",
+  "images": ["img/car.png", "img/Telco.png", "img/car.png"],
+  "type": "gallery"
+},
+{
+  "title": "Data Cleaning & Standardization",
+  "visible": true,
+  "description": "Transformed raw data into a reliable, structured model. Used Power Query to clean, standardize, and extract insights, enabling clear visualization of employee performance, monthly targets, and 12-month cumulative trends.",
+  "image": "img/clean.png",
+  "type": "video",
+  "link": "img/Cleaning.mp4"
+}
+
+]

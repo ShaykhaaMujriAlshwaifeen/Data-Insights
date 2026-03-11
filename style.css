@@ -1,0 +1,674 @@
+ /* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- MODERN VARIABLES (Slate & Emerald) ----- */
+:root {
+    --body-color: #0b0e14; /* Deep Midnight */
+    --card-bg: rgba(30, 41, 59, 0.5); /* Slate Blue Glass */
+    --card-border: rgba(255, 255, 255, 0.08);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8; /* Slate gray for P tags */
+    
+    /* Technical Accent Gradients */
+    --first-color: #10b981; /* Emerald Green */
+    --second-color: #06b6d4; /* Cyan */
+  /*  --accent-gradient: linear-gradient(135deg, #10b981, #06b6d4); */
+    --accent-gradient: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    --accent-hover: linear-gradient(135deg, #34d399, #22d3ee);
+    
+    --first-shadow-color: rgba(0, 0, 0, 0.5);
+}
+body.dark-mode {
+    --body-color: #121212;
+    --color-white: #1e1e1e;
+
+    --text-color-second: #f0f0f0;
+    --text-color-third: #4fd6d6;
+
+    --first-color: #6c5ce7;
+    --first-color-hover: #4834d4;
+
+    --second-color: #6c5ce7;
+    --third-color: #fbc531;
+    --first-shadow-color: rgba(19, 1, 1, 0.1);
+}
+
+  
+  
+  body {
+   background: #0f0c29;  /* fallback */
+    background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+       .navbar {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 15px 0;
+}
+
+.navbar-brand, .nav-link {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    filter: brightness(1.3);
+    cursor: pointer;
+}
+    /* =============== MODERN GRADIENT CARDS =============== */
+.admin-container, .project-box, .about-info, .skills-box {
+    position: relative;
+    background: linear-gradient(135deg, rgba(166, 149, 250, 0.768), rgba(56, 189, 248, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle white border */
+    border-radius: 20px !important;
+    padding: 30px;
+    margin-top: 20px;
+    
+    /* Soft shadow that doesn't conflict with background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    /* Transitions only for performance */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+/* Add a thin, vibrant gradient border glow */
+.admin-container::before, .project-box::before, .skills-box::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    border-radius: 20px;
+   
+    z-index: -1;
+    opacity: 0.1; /* Subtle base glow */
+    transition: opacity 0.4s ease;
+}
+
+/* Hover effect: The border glows brighter */
+.admin-container:hover, .project-box:hover, .skills-box:hover {
+    transform: translateY(-12px);
+    border-color: rgb(194, 183, 252) !important;
+    box-shadow: 0 10px 30px rgba(250, 77, 204, 0.471);
+}
+
+.admin-container:hover::before, .project-box:hover::before, .skills-box:hover::before {
+    opacity: 0.3; /* Intensity increases on hover */
+}
+
+/* =============== GLOBAL =============== */
+section{padding:60px 0}
+.wrapper{padding-inline:5vw}
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0b0e14; }
+::-webkit-scrollbar-thumb { 
+    background: var(--accent-gradient); 
+    border-radius: 10px; 
+}
+.logo{
+  width:50px;
+  margin-right:10px;
+  filter: brightness(0) invert(1);
+}
+h1, h2, h3, .project-title {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+}
+
+h4 { 
+    color: var(--first-color) !important; 
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.project-desc{ 
+  color: var(--text-primary) !important;
+  font-size: 0.75rem;
+  line-height: 1.6;
+
+  text-align: justify;
+  text-justify: inter-character; /* spreads letters instead of big word gaps */
+
+  
+  word-break: break-word;
+  overflow-wrap: break-word;
+text-wrap: pretty;
+  overflow: hidden;
+}
+
+/* =============== HERO / FEATURED =============== */
+.featured-box{
+  background: #0f0c29;  /* fallback */
+    background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+
+  color:#fff;padding:60px 20px;scroll-behavior:smooth
+}
+.featured-text{max-width:700px}
+
+/* =============== TOP HEADER =============== */
+.top-header{text-align:center;margin-bottom:5em}
+.top-header h1{font-weight:600;margin-bottom:10px}
+.top-header span{color:#999}
+
+/* =============== ABOUT =============== */
+
+.about-info p{font-size:15px}
+
+
+/* =============== CAROUSEL =============== */
+
+
+/* arrows */
+/* =============== COMPACT RETRO CORNER CONTROLS =============== */
+
+.carousel-control-prev, 
+.carousel-control-next {
+    /* Kept your exact vertical position */
+    top: 10px;
+    bottom: auto;
+    width: 15px; /* Reduced from 35px */
+    height: 5px;
+    opacity: 1;
+    z-index: 15;
+}
+
+/* Push to the far corners */
+.carousel-control-prev {
+    left: 1px;
+    right: auto;
+}
+
+.carousel-control-next {
+    right: 8px;
+    left: auto;
+}
+
+/* Compact Pixel Style Icons */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    width: 24px; /* Reduced from 30px */
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+    background-size: 50%;
+    border: 1.5px solid #ffffff; /* Thinner border for smaller size */
+    border-radius: 0% !important; 
+    box-shadow: 2px 2px 0px #000; /* Smaller 8-bit shadow */
+}
+
+/* Hover State */
+.carousel-control-prev:hover .carousel-control-prev-icon, 
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: #a1c6b5f7 !important; /* Emerald Accent */
+    transform: scale(1.05);
+}
+/* =============== CLOSE BUTTON HOVER & FOCUS ONLY =============== */
+
+
+
+/* =============== MOBILE COMPACT FIX =============== */
+@media (max-width: 768px) {
+    .carousel-control-prev, 
+    .carousel-control-next {
+        top: 12px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .carousel-control-prev { left: 5px; }
+    .carousel-control-next { right: 5px; }
+    
+    .carousel-control-prev-icon, 
+    .carousel-control-next-icon {
+        width: 24px;
+        height: 24px;
+        background-size: 45%;
+    }
+}
+
+/* =============== CONTACT =============== */
+@keyframes gradientAnimation{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
+.about-info {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* stack content */
+  align-items: flex-start; /* keep text aligned left */
+  width: 100%;
+  
+
+  /* Modern card look */
+  background: linear-gradient(135deg, rgba(166, 149, 250, 0.768), rgba(56, 189, 248, 0.05));
+  border-left: 6px solid #ccabfd;
+  border-radius: 8px;
+  padding: 34px;
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Skills card */
+.skills-box {
+  background: linear-gradient(135deg, rgba(166, 149, 250, 0.768), rgba(56, 189, 248, 0.05));
+  border-left: 6px solid #ccabfd; /* different shade if I want contrast */
+  border-radius: 8px;
+  padding: 25px;
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  
+  transition: transform 0.3s ease;
+}
+
+.skills-box:hover {
+  transform: translateY(-5px); /* little lift effect */
+}
+
+/* Skills header */
+.skills-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+}
+
+.skills-header h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin-top: 5px;
+  background: linear-gradient(135deg, rgba(36, 24, 92, 0.768), rgba(158, 9, 113, 0.511));
+  border-radius: 2px;
+}
+
+/* Skills tags */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-list span {
+  font-size: 0.9rem;
+ background: linear-gradient(135deg, rgba(166, 149, 250, 0.768), rgba(0, 11, 15, 0.522));
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skills-list span:hover {
+ 
+  background: linear-gradient(90deg, #b26ef6, #70a1e7);
+  transform: scale(1.05);
+}
+
+/* Shared style for section headers */
+.project-header,
+.top-header {
+  text-align: center;
+  margin-bottom: 1em; /* adjust spacing as needed */
+}
+
+.project-header h1,
+#about .top-header h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-header h1::after,
+#about .top-header h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  margin: 8px auto 0;
+  background: linear-gradient(135deg, rgba(195, 182, 252, 0.962), rgba(26, 18, 135, 0.129));
+  border-radius: 2px;
+}
+
+.social-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+  background: var(--accent-gradient) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* WhatsApp button */
+.social-btn.whatsapp {
+  background-color: #25d366;
+}
+
+/* LinkedIn button */
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+
+
+
+/* =============== FOOTER / LINKS =============== */
+.bottom-footer{font-size:14px;margin-top:10px}
+.text-mu a{color:#f3f7f9}
+.bottom-footer p>a{
+  text-decoration:none;color:rgb(252, 248, 248);transition:color .3s ease
+  
+}
+
+.bottom-footer p>a:hover,.text-mu a:hover{
+  background:linear-gradient(135deg,#ade5e3b1,#95ceb2);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.bottom-footer p>i{font-size:18px;z-index:2;margin:5px;color:rgb(247, 241, 241);}
+.bottom-footer p{
+color:#ffffff !important;
+}
+
+/* =============== BUTTON (generic) =============== */
+.bt{
+
+background: linear-gradient(90deg, #e0b8ecda, #6e50cfa9);
+color:white;
+padding:10px 22px;
+border:none;
+border-radius:10px;
+
+font-size:15px;
+font-weight:500;
+width: 100%;
+cursor:pointer;
+
+transition:all .3s ease;
+}
+
+.bt:hover{
+background: linear-gradient(90deg, #6da5de, #5818b1);
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* =============== MODALS / POWER BI =============== */
+.modal-backdrop.show{
+  opacity:.8;width:100vw;height:100vh;position:fixed;top:0;left:0
+}
+iframe{touch-action:pan-x pan-y}
+
+/* Fullscreen modal on mobile */
+@media (max-width:768px){
+  .modal-dialog{margin:0;max-width:100%;height:100%}
+  .modal-content{height:100%;border-radius:0}
+  .modal-body{height:calc(100% - 56px);padding:0}
+  .modal-body .ratio{height:100%}
+  .modal-body iframe{width:100%;height:100%;border:none}
+}
+@media (max-width: 768px) {
+  /* 1. Reset the ratio logic only for images on mobile */
+  .modal-dialog .ratio-16x9:has(img) {
+    --bs-aspect-ratio: 0 !important;
+    height: 100% !important; /* Force it to take the full modal height */
+    padding-bottom: 0 !important; /* Cancel the widescreen rule */
+  }
+
+  /* 2. Style the image to perfectly fill that space */
+  .modal-dialog .img-fluid {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important; /* Ensures the whole image is visible without stretching */
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  /* Ensure the carousel and its items take the full modal height */
+  .carousel, .carousel-inner, .carousel-item {
+    height: 100% !important;
+  }
+
+  /* Keep images centered and un-stretched */
+  .carousel-item img {
+    object-fit: contain !important;
+    background-color: #ede6e6; /* Optional: adds a black background if images vary in size */
+  }
+}
+@media (max-width: 768px) {
+  /* Prevent the indicators from being hidden behind the mobile nav bar */
+  .carousel-indicators {
+    bottom: 10px;
+  }
+
+  .carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important; /* Makes them circular */
+    margin: 0 5px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .carousel-indicators .active {
+    background-color: #fff !important;
+    transform: scale(1.2); /* Slight pop for the active dot */
+  }
+
+  /* Black background for the "letterbox" areas behind the image */
+  .carousel-item {
+    background-color: #000; 
+  }
+}
+/* Custom Carousel Indicators */
+.carousel-indicators {
+    bottom: -20px !important; /* Moves them below the image area */
+    margin-bottom: 0;
+}
+
+/* Style for original Bootstrap Indicators */
+.carousel-indicators [data-bs-target] {
+    width: 10px !important;       /* Makes the line a square/dot */
+    height: 10px !important;
+    border-radius: 5px !important; /* Rounds the corners */
+    background-color: #222 !important; /* Dark for visibility on white dashboards */
+    border: 1.5px solid #fff !important; /* White border so it's visible on dark blue */
+    opacity: 0.6;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+/* Active State: The "Pill" Shape */
+.carousel-indicators .active {
+    width: 30px !important;       /* Expands to a modern pill shape */
+    background-color: #64b89c !important; /* Your signature blue */
+    opacity: 1 !important;
+    border: none !important;      /* Clean look when active */
+}
+
+
+/* Adjust the modal body to give space for the dots below */
+@media (max-width: 768px) {
+    .modal-body {
+        padding-bottom: 40px !important; /* Space for indicators at the bottom */
+    }
+    
+    .carousel-indicators {
+        bottom: 10px !important; /* Keeps them inside the modal on mobile */
+    }
+}
+/* =============== RESPONSIVE =============== */
+
+/* tablets / small laptops */
+@media (max-width:1024px){
+  .featured-text{padding:0}
+  .image,.image img{width:320px;height:320px}
+}
+
+/* phones & narrow tablets */
+@media (max-width:900px){
+  /* mobile nav */
+  .nav-button{display:none}                        /* hidden by default on mobile */
+  .nav-menu.responsive .nav-button.mobile-visible{ /* show only inside opened menu */
+    display:flex;flex-direction:column;align-items:center;margin-top:20px
+  }
+  .nav-menu.responsive{left:0}
+  .nav-menu{
+    position:fixed;top:80px;left:-100%;
+    flex-direction:column;justify-content:center;align-items:center;
+    background:rgba(255,255,255,.7);backdrop-filter:blur(20px);
+    width:100%;min-height:450px;height:90vh;transition:.3s
+  }
+  .nav_menu_list{flex-direction:column}
+  .nav-menu-btn{display:flex;align-items:center;justify-content:center}
+
+  /* hero layout + GAP FIX */
+  .featured-box{
+    flex-direction:column;justify-content:center;
+    height:auto; /* don’t force a viewport height */
+  }
+  /* override the inline min-height on the hero if present */
+  #home.featured-box{min-height:auto !important;padding-bottom:16px !important}
+  /* tighten About top padding to eliminate visible gap */
+  #about.section{padding-top:16px}
+
+  .featured-text{
+    width:100%;order:2;justify-content:center;align-content:flex-start;min-height:auto
+  }
+  .social_icons{margin-top:2em}
+  .featured-image{order:1;justify-content:center;min-height:150px;width:100%;margin-top:65px}
+  .image,.image img{width:150px;height:150px}
+
+  /* common stacks */
+  .row{display:flex;flex-direction:column;justify-content:center;gap:50px}
+  .col{display:flex;justify-content:center;width:100%}
+  .about-info,.contact-info{width:100%}
+  .project-container{justify-content:center}
+  .project-box{width:80%}
+}
+
+/* tablets/phones: carousel + odds & ends */
+@media (max-width:768px){
+  .carousel-inner{height:350px}
+}
+
+/* small phones */
+@media (max-width:576px){
+  .carousel-control-prev,.carousel-control-next{top:3px;width:25px;height:25px}
+}
+
+/* very small phones */
+@media (max-width:540px){
+  .featured-name{font-size:40px}
+  .project-box{width:100%}
+  .form-inputs{flex-direction:column}
+  .input-field{width:100%}
+}
+@media (max-width: 768px) {
+  .top-header {
+    margin-bottom: 1em; /* reduce from 5em */
+  }
+
+  .about-info {
+    padding-block: 20px 30px; /* shrink vertical padding */
+    padding-inline: 15px;     /* tighten sides */
+    align-items: flex-start;  /* let text span full width */
+    text-align: left;         /* avoid center squish */
+  }
+
+  .about-info h5,
+  .about-info p {
+    margin-top: 10px; 
+    font-size: 14px;         /* slightly smaller */
+    line-height: 1.6;        /* better readability */
+    word-break: normal;      /* natural wrapping */
+    white-space: normal;     /* ensure smooth line breaks */
+  }
+}
+
+.preview-wrapper{
+height:180px;
+overflow:hidden;
+border-radius:10px;
+margin-bottom:12px;
+position:relative;
+}
+
+.project-preview{
+width:100%;
+height:auto;
+min-height:100%;
+transition:transform 6s ease;
+}
+
+.project-box:hover .project-preview{
+transform:translateY(-5%);
+}
+
+/* gradient overlay */
+
+.preview-wrapper::after{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0) 40%,
+rgba(0,0,0,0.35)
+);
+opacity:0;
+transition:opacity .4s ease;
+}
+
+.project-box:hover .preview-wrapper::after{
+opacity:1;
+}
+/* Make hamburger icon white */
+.navbar-toggler{
+border-color: rgba(229, 226, 239, 0.921);
+}
+
+.navbar-toggler-icon{
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+a, button, .project-box, .card{
+-webkit-tap-highlight-color: transparent;
+}
+
+
