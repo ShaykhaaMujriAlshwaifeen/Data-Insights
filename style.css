@@ -177,10 +177,10 @@ text-wrap: pretty;
 
 .carousel-control-prev, 
 .carousel-control-next {
-    /* Kept your exact vertical position */
+    /* Kept my exact vertical position */
     top: 10px;
     bottom: auto;
-    width: 15px; /* Reduced from 35px */
+    width: 15px; 
     height: 5px;
     opacity: 1;
     z-index: 15;
@@ -200,13 +200,13 @@ text-wrap: pretty;
 /* Compact Pixel Style Icons */
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
-    width: 24px; /* Reduced from 30px */
+    width: 24px; 
     height: 24px;
     background-color: rgba(0, 0, 0, 0.7) !important; 
     background-size: 50%;
     border: 1.5px solid #ffffff; /* Thinner border for smaller size */
     border-radius: 0% !important; 
-    box-shadow: 2px 2px 0px #000; /* Smaller 8-bit shadow */
+    box-shadow: 2px 2px 0px #000; /* Smaller 8 bit shadow */
 }
 
 /* Hover State */
@@ -465,7 +465,7 @@ iframe{touch-action:pan-x pan-y}
   /* Keep images centered and un-stretched */
   .carousel-item img {
     object-fit: contain !important;
-    background-color: #ede6e6; /* Optional: adds a black background if images vary in size */
+    background-color: #ede6e6; 
   }
 }
 @media (max-width: 768px) {
@@ -514,7 +514,7 @@ iframe{touch-action:pan-x pan-y}
 /* Active State: The "Pill" Shape */
 .carousel-indicators .active {
     width: 30px !important;       /* Expands to a modern pill shape */
-    background-color: #64b89c !important; /* Your signature blue */
+    background-color: #64b89c !important; /* my signature blue */
     opacity: 1 !important;
     border: none !important;      /* Clean look when active */
 }

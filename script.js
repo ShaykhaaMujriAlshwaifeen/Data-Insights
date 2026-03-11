@@ -38,7 +38,7 @@ fetch("projects.json")
             return; 
         }
 
-        // 1. Create the Card
+        // 1. Create the Card 
         container.innerHTML += `
             <div class="col-md-4">
                 <div class="admin-container project-box">
@@ -53,7 +53,7 @@ fetch("projects.json")
                 </div>
             </div>`;
 
-        // 2. Create the Modal
+        // 2. Create the Modal 
         const modalHTML = `
             <div class="modal fade" id="modal${index}" tabindex="-1">
                 <div class="modal-dialog modal-fullscreen-sm-down modal-lg modal-dialog-centered">
