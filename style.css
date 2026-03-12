@@ -150,17 +150,15 @@ text-wrap: pretty;
 }
 @media (max-width: 600px) {
 
-  .project-desc  {
+  .project-desc {
 
-    text-align: left;
+    text-align: center;
+
+    text-wrap: balance; /* Prevents single words on the last line */
 
   }
 
 }
-
-  
-
-   
 /* =============== HERO / FEATURED =============== */
 .featured-box{
   background: #0f0c29;  /* fallback */
