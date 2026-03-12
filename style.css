@@ -148,17 +148,7 @@ h4 {
 text-wrap: pretty;
   overflow: hidden;
 }
-@media (max-width: 600px) {
 
-  .project-desc {
-
-    text-align: center;
-
-    
-
-  }
-
-}
 /* =============== HERO / FEATURED =============== */
 .featured-box{
   background: #0f0c29;  /* fallback */
