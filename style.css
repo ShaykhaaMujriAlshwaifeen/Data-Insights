@@ -139,8 +139,8 @@ h4 {
   font-size: 0.75rem;
   line-height: 1.6;
 
-  text-align: center;
-  
+  text-align: justify;
+  text-justify: inter-character; /* spreads letters instead of big word gaps */
 
   
   word-break: break-word;
@@ -148,7 +148,17 @@ h4 {
 text-wrap: pretty;
   overflow: hidden;
 }
+@media (max-width: 600px) {
 
+  .project-desc {
+
+    text-align: left;
+
+    text-wrap: balance; /* Prevents single words on the last line */
+
+  }
+
+}
 /* =============== HERO / FEATURED =============== */
 .featured-box{
   background: #0f0c29;  /* fallback */
