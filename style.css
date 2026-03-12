@@ -81,7 +81,17 @@ body.dark-mode {
                 box-shadow 0.4s ease;
     overflow: hidden;
 }
+@media (max-width: 480px) {
 
+  .admin-container, .project-box { /* Replace with your actual card class */
+
+    padding-left: 15px; 
+
+    padding-right: 15px;
+
+  }
+
+}
 /* Add a thin, vibrant gradient border glow */
 .admin-container::before, .project-box::before, .skills-box::before {
     content: "";
