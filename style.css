@@ -152,11 +152,9 @@ text-wrap: pretty;
 
   .project-desc {
 
-    letter-spacing: -0.2px;
+    text-align: justify;
 
-    word-spacing: -1px; /* Subtle tightening helps justification */
-
-  }
+  text-justify: inter-character;  }
 
 }
 /* =============== HERO / FEATURED =============== */
